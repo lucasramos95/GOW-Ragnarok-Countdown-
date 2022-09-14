@@ -1,4 +1,3 @@
-import './App.css';
 import { useEffect, useState } from 'react';
 
 const useCountdown = (targetDate) => {
