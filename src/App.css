@@ -1,4 +1,4 @@
-.App, h2, .countdownText {
+.App, h2 {
   text-align: center;
   color: #282c34;
   position: relative;
@@ -10,6 +10,14 @@
   width: 100%;
   height: 100%;
   position: fixed;
+}
+
+.countdownText {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: black;
+  color: aliceblue;
 }
 
 @media (prefers-reduced-motion: no-preference) {
