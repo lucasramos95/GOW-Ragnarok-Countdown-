@@ -14,10 +14,14 @@
 
 .countdownText {
   position: relative;
-  display: flex;
-  flex-wrap: wrap;
-  background-color: black;
-  color: aliceblue;
+  
+}
+
+.show-counter, a {
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  display: block;
 }
 
 @media (prefers-reduced-motion: no-preference) {
