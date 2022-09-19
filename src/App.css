@@ -18,10 +18,10 @@
 }
 
 .show-counter, a {
+  display: flex;
   color: white;
   text-decoration: none;
   text-align: center;
-  display: block;
 }
 
 @media (prefers-reduced-motion: no-preference) {
