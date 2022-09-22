@@ -1,7 +1,8 @@
 import { useState } from 'react';
-import './App.css';
 import Carousel from 'react-elastic-carousel';
 import Item from './Item';
+import './App.css';
+
 
 export default function App() {
 
@@ -19,6 +20,11 @@ export default function App() {
     setItems([...items, nextItem])
   }
 
+  const removeItem = () => {
+    const endRange = Math.max(0, items.length - 1)
+    setItems(items.slice(0, endRange))
+  }
+
   return (
     <div className='App'>
       <img className='background' src='./background.jpg'/>
@@ -33,11 +39,16 @@ export default function App() {
       </div>
       <div className='container'>
         <div className='controls-wrapper'>
-
+          <button onClick={addItem}>Add Item</button>
+          <button onClick={removeItem}>Remove Items</button>
         </div>
         <hr className='seperator' />
         <div className='carousel-wraper'>
-          
+          <Carousel isRTL breakpoints={breakPoints}>
+            {items.map((item) => (
+              <Item key={item}>{item}</Item>
+            ))}
+          </Carousel>
         </div>
       </div>
     </div>
