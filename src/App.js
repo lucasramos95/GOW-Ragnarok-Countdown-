@@ -1,56 +1,32 @@
-import { useState } from 'react';
 import Carousel from 'react-elastic-carousel';
 import Item from './Item';
 import './App.css';
 
 
 export default function App() {
-
-  const breakPoints = [
-    { width: 1, itemToShow: 1 },
-    { width: 550, itemToShow: 2, itemToScroll: 2 },
-    { width: 768, itemToShow: 3 },
-    { width: 1200, itemToShow: 4 },
-  ]
-
-  const [items, setItems] = useState([1, 2, 3, 4, 5, 6, 7, 8])
-
-  const addItem = () => {
-    const nextItem = Math.max(1, items.length + 1)
-    setItems([...items, nextItem])
-  }
-
-  const removeItem = () => {
-    const endRange = Math.max(0, items.length - 1)
-    setItems(items.slice(0, endRange))
-  }
-
   return (
     <div className='App'>
       <img className='background' src='./background.jpg'/>
       <h2>GOD OF WAR RAGNAROK - LANÇAMENTO: 09/11/2022</h2>
-      <div className='gow_text'>
-      <p>Embarque com Kratos e Atreus em uma jornada épica emocionante sobre apego e superação.
-      Do Santa Monica Studio, esta é a sequência da aclamada versão de 2018 de God of War. 
-      O Fimbulwinter já começou. 
-      Kratos e Atreus devem viajar pelos Nove Reinos em busca de respostas enquanto as forças asgardianas se preparam para uma batalha profetizada que causará o fim do mundo. 
-      Nessa jornada, eles explorarão paisagens míticas impressionantes e enfrentarão inimigos aterradores: deuses nórdicos e monstros. 
-      A ameaça do Ragnarök se aproxima. Kratos e Atreus terão de escolher entre a segurança deles próprios e a dos reinos.</p>
-      </div>
-      <div className='container'>
-        <div className='controls-wrapper'>
-          <button onClick={addItem}>Add Item</button>
-          <button onClick={removeItem}>Remove Items</button>
+        <div className='gow_text'>
+          <p>Embarque com Kratos e Atreus em uma jornada épica emocionante sobre apego e superação.
+          Do Santa Monica Studio, esta é a sequência da aclamada versão de 2018 de God of War. 
+          O Fimbulwinter já começou. 
+          Kratos e Atreus devem viajar pelos Nove Reinos em busca de respostas enquanto as forças asgardianas se preparam para uma batalha profetizada que causará o fim do mundo. 
+          Nessa jornada, eles explorarão paisagens míticas impressionantes e enfrentarão inimigos aterradores: deuses nórdicos e monstros. 
+          A ameaça do Ragnarök se aproxima. Kratos e Atreus terão de escolher entre a segurança deles próprios e a dos reinos.
+          </p>
         </div>
-        <hr className='seperator' />
-        <div className='carousel-wraper'>
-          <Carousel isRTL breakpoints={breakPoints}>
-            {items.map((item) => (
-              <Item key={item}>{item}</Item>
-            ))}
+        <div className="styling-example">
+            <Carousel itemsToShow={3}>
+              <Item><img className='img-01' src='01.jpg'/></Item>
+              <Item><img className='img-01' src='02.jpg'/></Item>
+              <Item><img className='img-01' src='03.jpg'/></Item>
+              <Item><img className='img-01' src='04.jpg'/></Item>
+              <Item><img className='img-01' src='05.jpg'/></Item>
+              <Item><img className='img-01' src='06.jpg'/></Item>
           </Carousel>
         </div>
-      </div>
     </div>
   );
 }
