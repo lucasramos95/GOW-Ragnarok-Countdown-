@@ -1,13 +1,14 @@
+import React from 'react';
 import Carousel from 'react-elastic-carousel';
 import Item from './Item';
 import './App.css';
-
+import YoutubeEmbed from "./YoutubeEmbed";
 
 export default function App() {
   return (
     <div className='App'>
-      <img className='background' src='./background.jpg'/>
-      <h2>GOD OF WAR RAGNAROK - LANÇAMENTO: 09/11/2022</h2>
+        <img className='background' src='./background.jpg'/>
+        <h2>GOD OF WAR RAGNAROK - LANÇAMENTO: 09/11/2022</h2>
         <div className='gow_text'>
           <p>Embarque com Kratos e Atreus em uma jornada épica emocionante sobre apego e superação.
           Do Santa Monica Studio, esta é a sequência da aclamada versão de 2018 de God of War. 
@@ -27,6 +28,8 @@ export default function App() {
               <Item><img className='img-01' src='06.jpg'/></Item>
           </Carousel>
         </div>
+          <h1>Youtube Embed</h1>
+          <YoutubeEmbed embedId="rokGy0huYEA"/>
     </div>
   );
 }
