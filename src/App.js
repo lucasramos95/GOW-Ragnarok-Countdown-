@@ -29,7 +29,8 @@ export default function App() {
           </Carousel>
         </div>
           <h1>Youtube Embed</h1>
-          <YoutubeEmbed embedId="rokGy0huYEA"/>
+          <YoutubeEmbed embedId="x6oF3Jxu7X0"/>
+          <YoutubeEmbed embedId="0N4J-7gsaGc"/>
     </div>
   );
 }
