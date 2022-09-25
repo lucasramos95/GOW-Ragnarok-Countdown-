@@ -26,11 +26,13 @@ export default function App() {
               <Item><img className='img-01' src='04.jpg'/></Item>
               <Item><img className='img-01' src='05.jpg'/></Item>
               <Item><img className='img-01' src='06.jpg'/></Item>
-          </Carousel>
+            </Carousel>  
         </div>
+        <div className='container'>
           <h1>Youtube Embed</h1>
-          <YoutubeEmbed embedId="x6oF3Jxu7X0"/>
-          <YoutubeEmbed embedId="0N4J-7gsaGc"/>
+            <div className='video01'><YoutubeEmbed embedId="x6oF3Jxu7X0"/></div>
+            <div className='video02'><YoutubeEmbed embedId="0N4J-7gsaGc"/></div>
+        </div>
     </div>
   );
 }

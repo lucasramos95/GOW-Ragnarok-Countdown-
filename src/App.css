@@ -83,3 +83,16 @@
   width: 100%;
   position: absolute;
 }
+
+.container {
+  width: 50%;
+}
+
+.video01 {
+  padding: 5em;
+  display: block;
+}
+
+.video02 {
+  padding: 5em;
+}
