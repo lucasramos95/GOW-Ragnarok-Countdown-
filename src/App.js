@@ -8,7 +8,7 @@ export default function App() {
   return (
     <div className='App'>
         <img className='background' src='./background.jpg'/>
-        <h2>GOD OF WAR RAGNAROK - LANÇAMENTO: 09/11/2022</h2>
+        <img className='logo' src='07.jpg'/>
         <div className='gow_text'>
           <p>Embarque com Kratos e Atreus em uma jornada épica emocionante sobre apego e superação.
           Do Santa Monica Studio, esta é a sequência da aclamada versão de 2018 de God of War. 
